@@ -8,7 +8,7 @@ O projeto consiste na implementação do algoritmo de fluxo óptico Lucas-Kanade
 
 As imagens utilizadas para teste foram retiradas do conjunto "UCSD Anomaly Detection Dataset - Peds2", que mostram uma sequência de fotos tiradas de uma rua com sentido paralelo à câmera.
 
-[[https://github.com/LadyZizi34/LKOpticalFlow/master/Images/85.tif|alt=octocat]]
+![Alt text](/Images/85.tif?raw=true "Image")
 
 Método:
 
@@ -17,5 +17,7 @@ Para cada frame da sequência, primeiramente realiza-se a suavização da imagem
 Referências:
 
 Imagens - http://svcl.ucsd.edu/projects/anomaly/dataset.htm
+
 Algoritmo - https://www.datasciencecentral.com/profiles/blogs/implementing-lucas-kanade-optical-flow-algorithm-in-python
+
 Exemplo OpenCV - https://docs.opencv.org/3.2.0/d7/d8b/tutorial_py_lucas_kanade.html
