@@ -1,4 +1,4 @@
-# Identificação de movimento em imagens através de fluxo óptico
+# Identificação de Movimento em Imagens Através de Fluxo Óptico
 
 Autora: Laíse Aquino - número USP 7986924
 
@@ -8,7 +8,8 @@ O projeto consiste na implementação do algoritmo de fluxo óptico Lucas-Kanade
 
 As imagens utilizadas para teste foram retiradas do conjunto "UCSD Anomaly Detection Dataset - Peds2", que mostram uma sequência de fotos tiradas de uma rua com sentido paralelo à câmera.
 
-![img1](https://raw.githubusercontent.com/LadyZizi34/LKOpticalFlow/master/Images/85.png)
+![085](https://user-images.githubusercontent.com/6940966/41264053-eca43e90-6dc0-11e8-8a7c-8282b1b0f811.png)
+![105](https://user-images.githubusercontent.com/6940966/41264054-ecc3a41a-6dc0-11e8-8291-e3bfa735088c.png)
 
 ## Método
 
