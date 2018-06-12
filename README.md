@@ -1,5 +1,4 @@
 # Identificação de Movimento em Imagens Através de Fluxo Óptico
-
 Laíse Aquino - número USP 7986924
 
 ## Descrição
