@@ -8,7 +8,7 @@ O projeto consiste na implementação do algoritmo de fluxo óptico Lucas-Kanade
 
 As imagens utilizadas para teste foram retiradas do conjunto "UCSD Anomaly Detection Dataset - Peds2", que mostram uma sequência de fotos tiradas de uma rua com sentido paralelo à câmera.
 
-![Alt text](/Images/85.tif?raw=true "Image")
+![img1](https://raw.githubusercontent.com/LadyZizi34/LKOpticalFlow/master/Images/85.png)
 
 Método:
 
