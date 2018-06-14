@@ -1,32 +1,42 @@
 from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
-import cv2 #para testar o que seria melhor
+import pdb
 
+def localNoiseRedFilter(img, sigma, n):
+	imgOut = np.zeros(img.shape, dtype=float)
+	# indice central do filtro, equivalente ao padding necessario para aplica-lo na imagem
+	center = int(n/2 - 0.5)
+	# padding circular da imagem
+	img = np.pad(img, ((center,), (center,)), 'wrap')
+
+	for i in range(center, img.shape[0] - center):
+		iOut = i - center
+		for j in range(center, img.shape[1] - center):
+			jOut = j - center
+			neighbourhood = img[i-center:i+center+1, j-center:j +
+                            center+1]  # janela do filtro (vizinhanca)
+			avgPixels = np.mean(neighbourhood)  # media dos pixels da vizinhanca
+			# variancia local aproveita resultado anterior da media
+			localSigma = np.mean((neighbourhood - avgPixels) ** 2)
+			if localSigma == 0:  # resultaria em uma divisao por 0, portanto nao altera o pixel original
+				imgOut[iOut, jOut] = img[i, j]
+				continue
+			else:  # calculo do valor resultante do pixel
+				imgOut[iOut, jOut] = img[i, j] - \
+				    (sigma/localSigma) * (img[i, j] - avgPixels)
+
+	return imgOut
+
+# open image from tif file
 im = Image.open('Images/tif/085.tif')
 
 # convert to numpy array
 img = np.array(im)
-Image.fromarray(img).save('orig.png')
 
-# plt.imshow(img, cmap='gray')
-# plt.show()
+# apply some filter with window size 5
+filtered_img = localNoiseRedFilter(img, 5, 0.025)
+Image.fromarray(filtered_img).convert('RGB').save('Images/Filtered/085.png')
 
-avg = cv2.blur(img, (5, 5))
-Image.fromarray(avg).save('avg.png')
 
-gauss = cv2.GaussianBlur(img, (5, 5), 0)
-Image.fromarray(gauss).save('gauss.png')
 
-median = cv2.medianBlur(img, 5)
-Image.fromarray(median).save('median.png')
-
-plt.subplot(221), plt.imshow(img, cmap='gray'), plt.title('Original')
-plt.xticks([]), plt.yticks([])
-plt.subplot(222), plt.imshow(avg, cmap='gray'), plt.title('Average')
-plt.xticks([]), plt.yticks([])
-plt.subplot(223), plt.imshow(gauss, cmap='gray'), plt.title('Gaussian')
-plt.xticks([]), plt.yticks([])
-plt.subplot(224), plt.imshow(median, cmap='gray'), plt.title('Median')
-plt.xticks([]), plt.yticks([])
-plt.show()
