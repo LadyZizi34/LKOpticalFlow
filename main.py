@@ -28,15 +28,19 @@ def localNoiseRedFilter(img, sigma, n):
 
 	return imgOut
 
-# open image from tif file
-im = Image.open('Images/tif/085.tif')
+# open 5 images from tif files
+init = 85
+total = 10
 
-# convert to numpy array
-img = np.array(im)
+for i in range(10):
+	im = Image.open('Images/tif/0'+ str(init+i) + '.tif')
 
-# apply some filter with window size 5
-filtered_img = localNoiseRedFilter(img, 5, 0.025)
-Image.fromarray(filtered_img).convert('RGB').save('Images/Filtered/085.png')
+	# convert to numpy array
+	img = np.array(im)
+
+	# apply some filter with window size 5
+	filtered_img = localNoiseRedFilter(img, 5, 0.025)
+	Image.fromarray(filtered_img).convert('RGB').save('Images/Filtered/0'+ str(init+i) + '.png')
 
 
 
