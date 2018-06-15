@@ -1,0 +1,2 @@
+--- 204.27556347846985 sec for median on 30 images ---
+--- 48.164517879486084 sec for gaussian on 30 images ---
