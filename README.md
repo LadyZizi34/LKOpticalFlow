@@ -1,9 +1,9 @@
-# Identificação de Movimento em Imagens Através de Fluxo Óptico
+# Identificação de Movimento em Imagens Através de Fluxo Ótico
 Laíse Aquino - número USP 7986924
 
 ## Descrição
 
-O projeto consiste na implementação do algoritmo de fluxo óptico Lucas-Kanade para identificação de movimento em uma sequência de imagens. O objetivo é reconhecer a direção em que elementos da imagem estão se movendo, apresentando essa informação na forma de cores atribuídas aos pixels de um frame que representam o sentido do movimento de cada um.
+O projeto consiste na implementação do algoritmo de fluxo ótico Lucas-Kanade para identificação de movimento em uma sequência de imagens. O objetivo é reconhecer a direção em que elementos da imagem estão se movendo, apresentando essa informação na forma de cores atribuídas aos pixels de um frame que representam o sentido do movimento de cada um.
 
 As imagens utilizadas para teste foram retiradas do conjunto "UCSD Anomaly Detection Dataset - Peds2", que mostram uma sequência de fotos tiradas de uma rua com sentido paralelo à câmera.
 
