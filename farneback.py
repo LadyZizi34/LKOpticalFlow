@@ -100,11 +100,11 @@ if __name__ == '__main__':
 
 	show_hsv = True # Draw colors on second window
 	while True:
+		img = cam.grab() # frameskip
 		ret, img = cam.read()
 
-        # Calculate Lucas-Kanade of current and last frames with window=5
-        # Its REALLY SLOW so just leave it until hopefully gets a nice pic on later frames
-		flow = optFlowLK(prev, img, 5) 
+		# Calculate Farneback
+		flow = cv.calcOpticalFlowFarneback(prev, img, None, 0.6, 3, 15, 3, 5, 1.2, 0)
 		prev = img
 
 		cv.imshow('flow', draw_flow(img, flow))
