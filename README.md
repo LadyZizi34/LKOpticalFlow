@@ -17,7 +17,9 @@ Para cada frame da sequência, primeiramente realiza-se a suavização da imagem
 ## Execução
 
 Durante o projeto foram desenvolvidos os módulos *filter_input*, *lucas-kanade* e *farneback*, sendo o último apenas para comparação dos resultados com um método de fluxo ótico já implementado na biblioteca OpenCV. Demais módulos foram adicionados como dependências ao método de captura das imagens.
+
 O módulo *filter_input* normaliza, aplica filtros, converte e salva as imagens originais em um formato pronto para ser aplicado ao algoritmo de fluxo ótico. Todas as imagens originais e filtradas já estão carregadas no repositório, logo não é necessário executar este script.
+
 A execução do módulo *farneback* mostra o resultado desejado, exibindo de forma contínua o fluxo calculado sobre as imagens de teste. Já o módulo *lucas-kanade* utiliza as mesmas ferramentas de carregamento e visualização do módulo anterior, inerentes à biblioteca OpenCV, mas substitui o método pela implementação do algoritmo de Lucas-Kanade. Os resultados obtidos são melhor visualizados após um período de execução, quando são processadas imagens pertencentes ao meio da sequência.
 
 ## Referências
