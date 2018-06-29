@@ -12,7 +12,7 @@ As imagens utilizadas para teste foram retiradas do conjunto "UCSD Anomaly Detec
 
 ## Método
 
-Para cada frame da sequência, primeiramente realiza-se a suavização da imagem visando evitar a propagação de possíveis ruídos sem prejudicar a identificação dos elementos. Em seguida, caso as imagens utilizadas sejam coloridas, estas são convertidas para escala de cinza antes da aplicação do algoritmo de Lucas-Kanade, que resulta em uma série de vetores de movimento. Por fim, são atribuídas cores a estes vetores de acordo com sua direção, seguindo as posições padronizadas pela roda de cores RGB. 
+Para cada frame da sequência, primeiramente realiza-se a suavização da imagem visando evitar a propagação de possíveis ruídos sem prejudicar a identificação dos elementos. Em seguida, é aplicado o algoritmo de Lucas-Kanade, que resulta em uma série de vetores de movimento. Por fim, são atribuídas cores a estes vetores de acordo com sua direção, seguindo as posições padronizadas pela roda de cores RGB. 
 
 ## Referências
 
